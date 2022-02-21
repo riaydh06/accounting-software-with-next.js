@@ -1,5 +1,6 @@
-import { TRANSACTION } from '@constants/';
 import React from 'react';
+import { ELEMENT, TRANSACTION } from '@constants';
+import {} from '@constants';
 
 const TransactionTable = () => {
   return (
@@ -35,10 +36,11 @@ const TransactionTable = () => {
           </td>
           <td>
             <select name="trn">
-              <option value="0"></option>
-              <option value="1">Supply</option>
-              <option value="2">Office equipment</option>
-              <option value="3">Expence </option>
+              {ELEMENT.map((item) => (
+                <option key={item.id} value={item.id}>
+                  {item.name}
+                </option>
+              ))}
             </select>
           </td>
           <td>

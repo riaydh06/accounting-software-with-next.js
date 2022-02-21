@@ -12,7 +12,7 @@ const SummaryTable = () => {
       >
         <tr>
           <th height="50" colSpan="9" align="center" bgColor="#00FF7F">
-            <h1> Summary Of Transaction</h1>
+            <h1 align="center"> Summary Of Transaction</h1>
           </th>
         </tr>
         <tr bgColor="#FFCC66">

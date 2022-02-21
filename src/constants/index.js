@@ -30,7 +30,14 @@ export const tran = [
   { no: 15, t1: 2, tt1: -1, t2: 1, tt2: 1 },
   { no: 16, t1: 1, tt1: 1, t2: 7, tt2: 1 },
 ];
-// ` (`id`, `name`
+
+export const ELEMENT = [
+  { id: 0, name: '' },
+  { id: 1, name: 'Supply' },
+  { id: 2, name: 'Office equipment' },
+  { id: 3, name: 'Expence' },
+];
+
 export const TRANSACTION = [
   { id: 1, name: 'Paid on cash' },
   { id: 2, name: 'Borrow' },
