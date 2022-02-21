@@ -5,10 +5,12 @@ import textArea from './textArea.json';
 import validationError from './validationError.json';
 
 import notFound from './notFound.json';
+import metaTitle from './metaTitle.json';
 
 export default {
   translation: {
     BUTTONS: buttons,
+    META_TITLES: metaTitle,
     FIELDS_PLACEHOLDER: fieldsPlaceholder,
     FIELDS: fields,
     VALIDATION_ERRORS: validationError,
