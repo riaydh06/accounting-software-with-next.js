@@ -1,6 +1,9 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const SummaryTable = () => {
+  const transaction = useSelector((state) => state.transaction.transactionList);
+  console.log(transaction);
   return (
     <div className="main">
       <table
@@ -39,6 +42,20 @@ const SummaryTable = () => {
             <td width="150"> Notes payable </td>
             <td width="150"> Account payable </td>
           </tr>
+
+          {transaction?.map((item) => (
+            <tr className="balancerow" bgcolor="#FFE0B1" align="center">
+              <td width="100"> {item.date} </td>
+              <td width="100"> Cash </td>
+              <td width="100"> Account Receivable </td>
+              <td width="100"> Supplies </td>
+              <td width="100"> Office equipment </td>
+              <td width="10"> = </td>
+              <td width="150"> Notes payable </td>
+              <td width="150"> Account payable </td>
+              <td width="150"> Revenue </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
