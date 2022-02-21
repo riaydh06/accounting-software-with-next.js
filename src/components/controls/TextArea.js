@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import TextField from './TextField';
 
-import { INPUT_FIELD_DEFAULT_VELUES } from '@constants';
+import { INPUT_FIELD_DEFAULT_VALUES } from '@constants';
 
 class TextArea extends Component {
   state = {
     count: 0,
-    height: INPUT_FIELD_DEFAULT_VELUES.DEFAULT_HEIGHT,
+    height: INPUT_FIELD_DEFAULT_VALUES.DEFAULT_HEIGHT,
   };
 
   handleCounter = (value) => {
@@ -65,7 +65,7 @@ class TextArea extends Component {
                 overflow: 'hidden',
                 height:
                   count === 0
-                    ? INPUT_FIELD_DEFAULT_VELUES.DEFAULT_HEIGHT
+                    ? INPUT_FIELD_DEFAULT_VALUES.DEFAULT_HEIGHT
                     : height,
               }
             : null,
@@ -92,8 +92,8 @@ TextArea.propTypes = {
 };
 
 TextArea.defaultProps = {
-  rows: INPUT_FIELD_DEFAULT_VELUES.DEFAULT_ROWS,
-  maxLength: INPUT_FIELD_DEFAULT_VELUES.DEFAULT_MAX_LENGTH,
+  rows: INPUT_FIELD_DEFAULT_VALUES.DEFAULT_ROWS,
+  maxLength: INPUT_FIELD_DEFAULT_VALUES.DEFAULT_MAX_LENGTH,
   scrollHeight: false,
   helpTextTId: true,
 };
