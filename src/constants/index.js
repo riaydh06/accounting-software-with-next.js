@@ -31,7 +31,7 @@ export const tran = [
   { no: 16, t1: 1, tt1: 1, t2: 7, tt2: 1 },
 ];
 // ` (`id`, `name`
-export const trans = [
+export const TRANSACTION = [
   { id: 1, name: 'Paid on cash' },
   { id: 2, name: 'Borrow' },
   { id: 3, name: 'Service on cash' },
@@ -49,7 +49,7 @@ export const trans = [
   { id: 15, name: 'Get receivable' },
   { id: 16, name: 'Sell on cash' },
 ];
-export const variable = [
+export const VARIABLE = [
   { id: 1, name: 'Cash' },
   { id: 2, name: 'Account Receivable' },
   { id: 3, name: 'Supplies' },
