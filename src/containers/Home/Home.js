@@ -7,7 +7,6 @@ const Home = () => {
         <marquee> Accounting </marquee>
       </div>
       <h1 class="t11" align="center">
-        {' '}
         Transaction Table
       </h1>
 
@@ -28,11 +27,10 @@ const Home = () => {
         </tr>
         <tr>
           <td>
-            <input name="date" type="date" />{' '}
+            <input name="date" type="date" />
           </td>
           <td>
-            {' '}
-            <input name="qun" type="number" />{' '}
+            <input name="qun" type="number" />
           </td>
           <td>
             <select name="trn">
@@ -63,12 +61,10 @@ const Home = () => {
             </select>
           </td>
           <td>
-            {' '}
-            <input name="price" type="number" />{' '}
+            <input name="price" type="number" />
           </td>
           <td>
-            {' '}
-            <input name="submit" type="submit" value="Submit" />{' '}
+            <input name="submit" type="submit" value="Submit" />
           </td>
         </tr>
       </table>
