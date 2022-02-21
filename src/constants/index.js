@@ -11,7 +11,6 @@ export const INPUT_FIELD_DEFAULT_VALUES = {
   DEFAULT_HEIGHT: 38,
 };
 
-// (`no`, `t1`, `tt1`, `t2`, `tt2`)
 export const tran = [
   { no: 1, t1: 1, tt1: -1, t2: 3, tt2: 1 },
   { no: 2, t1: 1, tt1: 1, t2: 6, tt2: 1 },

@@ -1,3 +1,7 @@
 export const SIGN_UP = {
   SIGN_UP_SUCCESS: 'SIGN_UP_SUCCESS',
 };
+
+export const TRANSACTION = {
+  ADD_TRANSACTION: 'ADD_TRANSACTION',
+};
