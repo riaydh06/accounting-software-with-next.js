@@ -12,6 +12,7 @@ const SummaryTable = () => {
         width="1100"
         height="150"
         color="black"
+        className="mb-5"
       >
         <thead>
           <tr>
@@ -56,6 +57,23 @@ const SummaryTable = () => {
               <td width="150"> Revenue </td>
             </tr>
           ))}
+          <tr>
+            <td>
+              <h4>Grand Total</h4>
+            </td>
+            <td> </td>
+            <td>
+              <h4> 100 TK</h4>
+            </td>
+            <td> </td>
+            <td> </td>
+            <td>=</td>
+            <td> </td>
+            <td>
+              <h4>100 TK</h4>
+            </td>
+            <td> </td>
+          </tr>
         </tbody>
       </table>
     </div>
