@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { ELEMENT, TRANSACTION } from '@constants';
+import { ELEMENT, TRANSACTION_TYPE } from '@constants';
 import {} from '@constants';
 import { useDispatch } from 'react-redux';
 import { addTransactionAction } from '@actions/TransactionAction';
@@ -14,8 +14,8 @@ const TransactionTable = () => {
   const [price, setPrice] = useState(0);
 
   const addTransaction = () => {
-    if (data && trn1 && price) {
-      dispatch(addTransactionAction());
+    if (date && trn1 && price) {
+      dispatch(addTransactionAction({ date, trn, trn1, price, quality }));
     }
   };
 
@@ -48,7 +48,7 @@ const TransactionTable = () => {
       </td>
       <td>
         <select value={trn1} onChange={(e) => setTrn1(e.target.value)}>
-          {TRANSACTION.map((item) => (
+          {TRANSACTION_TYPE.map((item) => (
             <option key={item.id} value={item.id}>
               {item.name}
             </option>
@@ -64,9 +64,7 @@ const TransactionTable = () => {
         />
       </td>
       <td>
-        <button onClick={() => console.log(trn, trn1, date, price)}>
-          Submit
-        </button>
+        <button onClick={addTransaction}>Submit</button>
       </td>
     </tr>
   );

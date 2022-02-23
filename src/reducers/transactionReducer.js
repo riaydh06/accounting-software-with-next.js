@@ -1,4 +1,5 @@
 import { TRANSACTION } from '@actions';
+import { addTransaction } from '@utils/transaction';
 
 const initialState = {
   transactionList: [
@@ -57,6 +58,10 @@ const transactionReducer = (state = initialState, action) => {
     case TRANSACTION.ADD_TRANSACTION:
       return {
         ...state,
+        transactionList: [
+          ...state.transactionList,
+          addTransaction(action.data),
+        ],
       };
 
     default:

@@ -11,23 +11,23 @@ export const INPUT_FIELD_DEFAULT_VALUES = {
   DEFAULT_HEIGHT: 38,
 };
 
-export const tran = [
-  { no: 1, t1: 1, tt1: -1, t2: 3, tt2: 1 },
-  { no: 2, t1: 1, tt1: 1, t2: 6, tt2: 1 },
-  { no: 3, t1: 1, tt1: 1, t2: 7, tt2: 1 },
-  { no: 4, t1: 2, tt1: 1, t2: 7, tt2: 1 },
-  { no: 5, t1: 1, tt1: -1, t2: 3, tt2: 1 },
-  { no: 6, t1: 3, tt1: 1, t2: 6, tt2: 1 },
-  { no: 7, t1: 1, tt1: -1, t2: 7, tt2: -1 },
-  { no: 8, t1: 1, tt1: 1, t2: 5, tt2: 1 },
-  { no: 9, t1: 1, tt1: -1, t2: 6, tt2: -1 },
-  { no: 10, t1: 1, tt1: -1, t2: 7, tt2: -11 },
-  { no: 11, t1: 6, tt1: 1, t2: 7, tt2: -1 },
-  { no: 12, t1: 1, tt1: 1, t2: 7, tt2: 1 },
-  { no: 13, t1: 1, tt1: -1, t2: 5, tt2: -1 },
-  { no: 14, t1: 2, tt1: 1, t2: 7, tt2: 1 },
-  { no: 15, t1: 2, tt1: -1, t2: 1, tt2: 1 },
-  { no: 16, t1: 1, tt1: 1, t2: 7, tt2: 1 },
+export const TRANSACTION_CONDITION = [
+  { id: 1, t1: 1, tt1: -1, t2: 3, tt2: 1 },
+  { id: 2, t1: 1, tt1: 1, t2: 6, tt2: 1 },
+  { id: 3, t1: 1, tt1: 1, t2: 7, tt2: 1 },
+  { id: 4, t1: 2, tt1: 1, t2: 7, tt2: 1 },
+  { id: 5, t1: 1, tt1: -1, t2: 3, tt2: 1 },
+  { id: 6, t1: 3, tt1: 1, t2: 6, tt2: 1 },
+  { id: 7, t1: 1, tt1: -1, t2: 7, tt2: -1 },
+  { id: 8, t1: 1, tt1: 1, t2: 5, tt2: 1 },
+  { id: 9, t1: 1, tt1: -1, t2: 6, tt2: -1 },
+  { id: 10, t1: 1, tt1: -1, t2: 7, tt2: -11 },
+  { id: 11, t1: 6, tt1: 1, t2: 7, tt2: -1 },
+  { id: 12, t1: 1, tt1: 1, t2: 7, tt2: 1 },
+  { id: 13, t1: 1, tt1: -1, t2: 5, tt2: -1 },
+  { id: 14, t1: 2, tt1: 1, t2: 7, tt2: 1 },
+  { id: 15, t1: 2, tt1: -1, t2: 1, tt2: 1 },
+  { id: 16, t1: 1, tt1: 1, t2: 7, tt2: 1 },
 ];
 
 export const ELEMENT = [
@@ -37,7 +37,7 @@ export const ELEMENT = [
   { id: 3, name: 'Expence' },
 ];
 
-export const TRANSACTION = [
+export const TRANSACTION_TYPE = [
   { id: 1, name: 'Paid on cash' },
   { id: 2, name: 'Borrow' },
   { id: 3, name: 'Service on cash' },

@@ -46,7 +46,7 @@ const SummaryTable = () => {
             <td width="150"> Account payable </td>
           </tr>
 
-          {transaction?.map(({ date, balance, t1, tt1, t2, tt2 }) => {
+          {transaction?.map(({ id, date, balance, t1, tt1, t2, tt2 }) => {
             let arr = ['', '', '', '', '', '', '', ''];
             arr[t1 - 1] = balance * tt1;
             arr[t2 - 1] = balance * tt2;
@@ -54,7 +54,12 @@ const SummaryTable = () => {
             sum[t2 - 1] = sum[t2 - 1] + arr[t2 - 1];
 
             return (
-              <tr className="balancerow" bgcolor="#FFE0B1" align="center">
+              <tr
+                key={id}
+                className="balancerow"
+                bgcolor="#FFE0B1"
+                align="center"
+              >
                 <td width="100"> {date} </td>
                 <td> {arr[0]}</td>
                 <td> {arr[1]}</td>
@@ -69,7 +74,7 @@ const SummaryTable = () => {
           })}
 
           <tr className="balancerow" bgcolor="#FFE0B1" align="center">
-            <td width="100"></td>
+            <td width="100">Total</td>
             <td> {sum[0]}</td>
             <td> {sum[1]}</td>
             <td> {sum[2]}</td>
