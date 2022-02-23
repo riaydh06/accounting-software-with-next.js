@@ -4,6 +4,7 @@ export const addTransaction = (data) => {
   const { date, price, trn, trn1 } = data;
 
   const row = TRANSACTION_CONDITION.find((item) => item.id == trn1);
+
   if (row['t1'] == 3) {
     if (trn == 2) row['t1'] = 4;
   }
