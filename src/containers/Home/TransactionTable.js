@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { ELEMENT, TRANSACTION_TYPE } from '@constants';
 import {} from '@constants';
 import { useDispatch } from 'react-redux';
-import { addTransactionAction } from '../../actions/transactionAction';
+import { addTransactionAction } from '@actions/transactionAction';
 
 const TransactionTable = () => {
   const dispatch = useDispatch();
