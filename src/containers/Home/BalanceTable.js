@@ -1,6 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const BalanceTable = () => {
+  const grandTotal1 = useSelector((state) => state.transaction.grandTotal1);
+  const grandTotal2 = useSelector((state) => state.transaction.grandTotal2);
+  const sum = useSelector((state) => state.transaction.sum);
+
   return (
     <table
       align="center"
@@ -32,19 +37,23 @@ const BalanceTable = () => {
             Office Equipment
           </td>
           <td>
-            $arr[0]
+            {sum[0]}
             <br />
-            $arr[1]
+            {sum[1]}
             <br />
-            $arr[2]
+            {sum[2]}
             <br />
-            $arr[3]
+            {sum[3]}
             <br />
           </td>
         </tr>
         <tr>
-          <td>Total Assets</td>
-          <td>$grand_total1 </td>
+          <td>
+            <h5>Total Assets</h5>
+          </td>
+          <td>
+            <h3>{grandTotal1}</h3>
+          </td>
         </tr>
         <tr>
           <td>
@@ -55,17 +64,21 @@ const BalanceTable = () => {
             Owner Equity
           </td>
           <td>
-            $arr[4]
+            {sum[4]}
             <br />
-            $arr[5]
+            {sum[5]}
             <br />
-            $arr[6]
+            {sum[6]}
             <br />
           </td>
         </tr>
         <tr>
-          <td>Total Liability & Owner Equity</td>
-          <td>$grand_total2 </td>
+          <td>
+            <h5>Total Liability & Owner Equity</h5>
+          </td>
+          <td>
+            <h3>{grandTotal2}</h3>
+          </td>
         </tr>
       </tbody>
     </table>

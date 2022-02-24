@@ -26,3 +26,20 @@ export const addTransaction = (data) => {
     tt2,
   };
 };
+
+export const calculateSum = (data) => {
+  let sum = [0, 0, 0, 0, 0, 0, 0, 0];
+  data.map((item) => {
+    let arr = ['', '', '', '', '', '', '', ''];
+    arr[item.t1 - 1] = item.balance * item.tt1;
+    arr[item.t2 - 1] = item.balance * item.tt2;
+    sum[item.t1 - 1] = sum[item.t1 - 1] + arr[item.t1 - 1];
+    sum[item.t2 - 1] = sum[item.t2 - 1] + arr[item.t2 - 1];
+  });
+
+  return {
+    sum,
+    grandTotal1: sum[0] + sum[1] + sum[2] + sum[3],
+    grandTotal2: sum[4] + sum[5] + sum[6],
+  };
+};

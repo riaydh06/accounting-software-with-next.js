@@ -7,7 +7,7 @@ import { addTransactionAction } from '@actions/transactionAction';
 const TransactionTable = () => {
   const dispatch = useDispatch();
 
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState('');
   const [quality, setQuality] = useState(0);
   const [trn, setTrn] = useState('');
   const [trn1, setTrn1] = useState('');

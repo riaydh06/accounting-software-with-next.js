@@ -3,8 +3,9 @@ import { useSelector } from 'react-redux';
 
 const SummaryTable = () => {
   const transaction = useSelector((state) => state.transaction.transactionList);
-
-  let sum = [0, 0, 0, 0, 0, 0, 0, 0];
+  const grandTotal1 = useSelector((state) => state.transaction.grandTotal1);
+  const grandTotal2 = useSelector((state) => state.transaction.grandTotal2);
+  const sum = useSelector((state) => state.transaction.sum);
 
   return (
     <div className="main">
@@ -50,8 +51,6 @@ const SummaryTable = () => {
             let arr = ['', '', '', '', '', '', '', ''];
             arr[t1 - 1] = balance * tt1;
             arr[t2 - 1] = balance * tt2;
-            sum[t1 - 1] = sum[t1 - 1] + arr[t1 - 1];
-            sum[t2 - 1] = sum[t2 - 1] + arr[t2 - 1];
 
             return (
               <tr
@@ -89,18 +88,16 @@ const SummaryTable = () => {
             <td>
               <h4>Grand Total</h4>
             </td>
-            <td> </td>
-            <td>
-              <h4> {sum[0] + sum[1] + sum[2] + sum[3]}</h4>
+
+            <td colSpan="4">
+              <h4> {grandTotal1}</h4>
             </td>
-            <td> </td>
-            <td> </td>
+
             <td>=</td>
-            <td> </td>
-            <td>
-              <h4>{sum[4] + sum[5] + sum[6]}</h4>
+
+            <td colSpan="3">
+              <h4>{grandTotal2}</h4>
             </td>
-            <td> </td>
           </tr>
         </tbody>
       </table>
