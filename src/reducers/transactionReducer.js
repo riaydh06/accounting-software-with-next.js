@@ -12,10 +12,7 @@ const transactionReducer = (state = initialState, action) => {
     case TRANSACTION.ADD_TRANSACTION:
       return {
         ...state,
-        transactionList: [
-          ...state.transactionList,
-          addTransaction(action.data),
-        ],
+        ...addTransaction(action.data, state),
       };
 
     default:

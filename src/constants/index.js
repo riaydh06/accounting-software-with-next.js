@@ -38,6 +38,7 @@ export const ELEMENT = [
 ];
 
 export const TRANSACTION_TYPE = [
+  { id: 0, name: '' },
   { id: 1, name: 'Paid on cash' },
   { id: 2, name: 'Borrow' },
   { id: 3, name: 'Service on cash' },
