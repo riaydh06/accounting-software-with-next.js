@@ -47,7 +47,7 @@ const BalanceTable = () => {
             <br />
           </td>
         </tr>
-        <tr>
+        <tr bgcolor="#FFE0B1">
           <td>
             <h5>Total Assets</h5>
           </td>
@@ -72,7 +72,7 @@ const BalanceTable = () => {
             <br />
           </td>
         </tr>
-        <tr>
+        <tr bgcolor="#FFE0B1">
           <td>
             <h5>Total Liability & Owner Equity</h5>
           </td>

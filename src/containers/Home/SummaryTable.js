@@ -23,8 +23,7 @@ const SummaryTable = () => {
               <h1 align="center"> Summary Of Transaction</h1>
             </th>
           </tr>
-        </thead>
-        <tbody>
+
           <tr bgcolor="#FFCC66">
             <th rowSpan="2" width="70">
               Date
@@ -37,7 +36,7 @@ const SummaryTable = () => {
             </th>
           </tr>
 
-          <tr className="balancerow" bgcolor="#FFE0B1" align="center">
+          <tr bgcolor="#FFE0B1" align="center">
             <td width="100"> Cash </td>
             <td width="100"> Account Receivable </td>
             <td width="100"> Supplies </td>
@@ -46,19 +45,15 @@ const SummaryTable = () => {
             <td width="150"> Notes payable </td>
             <td width="150"> Account payable </td>
           </tr>
-
+        </thead>
+        <tbody>
           {transaction?.map(({ id, date, balance, t1, tt1, t2, tt2 }) => {
             let arr = ['', '', '', '', '', '', '', ''];
             arr[t1 - 1] = balance * tt1;
             arr[t2 - 1] = balance * tt2;
 
             return (
-              <tr
-                key={id}
-                className="balancerow"
-                bgcolor="#FFE0B1"
-                align="center"
-              >
+              <tr key={id} className="balancerow" align="center">
                 <td width="100"> {date} </td>
                 <td> {arr[0]}</td>
                 <td> {arr[1]}</td>
@@ -72,7 +67,7 @@ const SummaryTable = () => {
             );
           })}
 
-          <tr className="balancerow" bgcolor="#FFE0B1" align="center">
+          <tr bgcolor="#FFE0B1" align="center">
             <td width="100">Total</td>
             <td> {sum[0]}</td>
             <td> {sum[1]}</td>
