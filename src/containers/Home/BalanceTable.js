@@ -22,7 +22,7 @@ const BalanceTable = () => {
         </tr>
       </thead>
       <tbody>
-        <tr bgcolor="#FFCC66">
+        <tr bgcolor="#FFCC66" align="center">
           <th>Assets</th>
           <th width="300">Amount</th>
         </tr>
