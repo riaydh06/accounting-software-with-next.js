@@ -21,7 +21,7 @@ export const TRANSACTION_CONDITION = [
   { id: 7, t1: 1, tt1: -1, t2: 7, tt2: -1 },
   { id: 8, t1: 1, tt1: 1, t2: 5, tt2: 1 },
   { id: 9, t1: 1, tt1: -1, t2: 6, tt2: -1 },
-  { id: 10, t1: 1, tt1: -1, t2: 7, tt2: -11 },
+  { id: 10, t1: 1, tt1: -1, t2: 7, tt2: -1 },
   { id: 11, t1: 6, tt1: 1, t2: 7, tt2: -1 },
   { id: 12, t1: 1, tt1: 1, t2: 7, tt2: 1 },
   { id: 13, t1: 1, tt1: -1, t2: 5, tt2: -1 },
