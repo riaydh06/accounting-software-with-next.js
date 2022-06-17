@@ -26,6 +26,7 @@ const TransactionTable = () => {
           name="data"
           value={date}
           type="date"
+          required
           onChange={(e) => setDate(e.target.value)}
         />
       </td>
@@ -47,7 +48,7 @@ const TransactionTable = () => {
         </select>
       </td>
       <td>
-        <select value={trn1} onChange={(e) => setTrn1(e.target.value)}>
+        <select value={trn1} required onChange={(e) => setTrn1(e.target.value)}>
           {TRANSACTION_TYPE.map((item) => (
             <option key={item.id} value={item.id}>
               {item.name}
@@ -60,6 +61,7 @@ const TransactionTable = () => {
           name="price"
           type="number"
           value={price}
+          required
           onChange={(e) => setPrice(e.target.value)}
         />
       </td>
@@ -85,7 +87,7 @@ const TransactionTable = () => {
         color="black"
       >
         <thead bgcolor="#FFCC66">
-          <tr>
+          <tr align="center">
             <th width="100">Date</th>
             <th width="50">Quantity</th>
             <th>Element</th>

@@ -24,7 +24,7 @@ const SummaryTable = () => {
             </th>
           </tr>
 
-          <tr bgcolor="#FFCC66">
+          <tr bgcolor="#FFCC66" align="center">
             <th rowSpan="2" width="70">
               Date
             </th>
