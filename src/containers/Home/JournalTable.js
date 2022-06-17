@@ -37,38 +37,38 @@ const JournalTable = () => {
 
         {transaction.map((item) => {
           return (
-            <tr align="center">
-              <th height="10px" width="100">
+            <tr className="balancerow" align="center">
+              <td height="10px" width="100">
                 {item.date}
-              </th>
-              <th height="10px" width="487">
+              </td>
+              <td height="10px" width="487">
                 <p>{VARIABLE[item.t1 - 1].name} Dr</p>
                 <p>{VARIABLE[item.t2 - 1].name} Cr</p>
-              </th>
-              <th width="12">=</th>
-              <th height="10px">
+              </td>
+              <td width="12">=</td>
+              <td height="10px">
                 <p>{item.balance}</p>
                 <p>0</p>
-              </th>
-              <th height="10px">
+              </td>
+              <td height="10px">
                 <p>0</p>
                 <p>{item.balance}</p>
-              </th>
+              </td>
             </tr>
           );
         })}
         <tr bgcolor="#FFE0B1" align="center">
-          <th height="10px" width="100">
+          <td height="10px" width="100">
             Total
-          </th>
-          <th height="10px" width="487"></th>
-          <th width="12">=</th>
-          <th height="10px">
+          </td>
+          <td height="10px" width="487"></td>
+          <td width="12">=</td>
+          <td height="10px">
             <p>{grandTotal1}</p>
-          </th>
-          <th height="10px">
+          </td>
+          <td height="10px">
             <p>{grandTotal2}</p>
-          </th>
+          </td>
         </tr>
       </tbody>
     </table>
